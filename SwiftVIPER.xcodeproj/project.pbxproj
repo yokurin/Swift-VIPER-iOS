@@ -79,10 +79,7 @@
 			children = (
 				4A5B56BA2195E0E4005082B8 /* AppDelegate.swift */,
 				4A5B56BC2195E0E4005082B8 /* ViewController.swift */,
-				4A5B56BE2195E0E4005082B8 /* Main.storyboard */,
-				4A5B56C12195E0E5005082B8 /* Assets.xcassets */,
-				4A5B56C32195E0E5005082B8 /* LaunchScreen.storyboard */,
-				4A5B56C62195E0E5005082B8 /* Info.plist */,
+				4A5B56DA2195E912005082B8 /* Resources */,
 			);
 			path = SwiftVIPER;
 			sourceTree = "<group>";
@@ -94,6 +91,17 @@
 				4A5B56D12195E0E5005082B8 /* Info.plist */,
 			);
 			path = SwiftVIPERTests;
+			sourceTree = "<group>";
+		};
+		4A5B56DA2195E912005082B8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4A5B56BE2195E0E4005082B8 /* Main.storyboard */,
+				4A5B56C32195E0E5005082B8 /* LaunchScreen.storyboard */,
+				4A5B56C12195E0E5005082B8 /* Assets.xcassets */,
+				4A5B56C62195E0E5005082B8 /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -361,7 +369,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = SwiftVIPER/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SwiftVIPER/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -378,7 +386,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = SwiftVIPER/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SwiftVIPER/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

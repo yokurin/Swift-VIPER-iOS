@@ -38,4 +38,12 @@ extension Viewable where Self: UIViewController {
     func dismiss(animated: Bool, _completion: @escaping (() -> Void)) {
         self.dismiss(animated: animated, completion: _completion)
     }
+
+    var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .portrait
+    }
+    var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
+        return .portrait
+    }
+
 }

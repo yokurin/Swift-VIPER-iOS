@@ -13,6 +13,28 @@
 		4A5B56C22195E0E5005082B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A5B56C12195E0E5005082B8 /* Assets.xcassets */; };
 		4A5B56C52195E0E5005082B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A5B56C32195E0E5005082B8 /* LaunchScreen.storyboard */; };
 		4A5B56D02195E0E5005082B8 /* SwiftVIPERTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5B56CF2195E0E5005082B8 /* SwiftVIPERTests.swift */; };
+		AE895348219981A700BA9616 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE895346219981A700BA9616 /* DetailViewController.swift */; };
+		AE895349219981A700BA9616 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE895347219981A700BA9616 /* DetailViewController.xib */; };
+		AE89534B219981BC00BA9616 /* DetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE89534A219981BC00BA9616 /* DetailRouter.swift */; };
+		AE89534D219981DA00BA9616 /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE89534C219981DA00BA9616 /* DetailInteractor.swift */; };
+		AE89534F219981EA00BA9616 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE89534E219981EA00BA9616 /* DetailPresenter.swift */; };
+		AE895351219981F800BA9616 /* DetailEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE895350219981F800BA9616 /* DetailEntities.swift */; };
+		AED17A1021992ABB0000127C /* Routerable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED17A0F21992ABB0000127C /* Routerable.swift */; };
+		AED17A1221992AD90000127C /* Presenterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED17A1121992AD90000127C /* Presenterable.swift */; };
+		AED17A1421992AEF0000127C /* Viewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED17A1321992AEF0000127C /* Viewable.swift */; };
+		AED17A1621992B090000127C /* Interactorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED17A1521992B090000127C /* Interactorable.swift */; };
+		AED17A2121993C000000127C /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED17A1F21993C000000127C /* ListViewController.swift */; };
+		AED17A2221993C000000127C /* ListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AED17A2021993C000000127C /* ListViewController.xib */; };
+		AED17A2421993C180000127C /* ListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED17A2321993C180000127C /* ListPresenter.swift */; };
+		AED17A2621993C2A0000127C /* ListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED17A2521993C2A0000127C /* ListRouter.swift */; };
+		AED17A2821993C450000127C /* ListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED17A2721993C450000127C /* ListInteractor.swift */; };
+		AED17A2B219941450000127C /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED17A2A219941450000127C /* Api.swift */; };
+		AED17A2D2199418D0000127C /* GitHubApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED17A2C2199418D0000127C /* GitHubApi.swift */; };
+		AED17A30219941BA0000127C /* GitHubRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED17A2F219941BA0000127C /* GitHubRepository.swift */; };
+		AED17A352199540C0000127C /* CollectionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED17A342199540C0000127C /* CollectionExtension.swift */; };
+		AED17A3721995D900000127C /* ListEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED17A3621995D900000127C /* ListEntities.swift */; };
+		AED17A3921995E8E0000127C /* ListTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED17A3821995E8E0000127C /* ListTableViewDataSource.swift */; };
+		AED17A3B219969950000127C /* TableViewItemDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED17A3A219969950000127C /* TableViewItemDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +58,28 @@
 		4A5B56CB2195E0E5005082B8 /* SwiftVIPERTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftVIPERTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A5B56CF2195E0E5005082B8 /* SwiftVIPERTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftVIPERTests.swift; sourceTree = "<group>"; };
 		4A5B56D12195E0E5005082B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE895346219981A700BA9616 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		AE895347219981A700BA9616 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		AE89534A219981BC00BA9616 /* DetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRouter.swift; sourceTree = "<group>"; };
+		AE89534C219981DA00BA9616 /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
+		AE89534E219981EA00BA9616 /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
+		AE895350219981F800BA9616 /* DetailEntities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEntities.swift; sourceTree = "<group>"; };
+		AED17A0F21992ABB0000127C /* Routerable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routerable.swift; sourceTree = "<group>"; };
+		AED17A1121992AD90000127C /* Presenterable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenterable.swift; sourceTree = "<group>"; };
+		AED17A1321992AEF0000127C /* Viewable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Viewable.swift; sourceTree = "<group>"; };
+		AED17A1521992B090000127C /* Interactorable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactorable.swift; sourceTree = "<group>"; };
+		AED17A1F21993C000000127C /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		AED17A2021993C000000127C /* ListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListViewController.xib; sourceTree = "<group>"; };
+		AED17A2321993C180000127C /* ListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenter.swift; sourceTree = "<group>"; };
+		AED17A2521993C2A0000127C /* ListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRouter.swift; sourceTree = "<group>"; };
+		AED17A2721993C450000127C /* ListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListInteractor.swift; sourceTree = "<group>"; };
+		AED17A2A219941450000127C /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		AED17A2C2199418D0000127C /* GitHubApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubApi.swift; sourceTree = "<group>"; };
+		AED17A2F219941BA0000127C /* GitHubRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRepository.swift; sourceTree = "<group>"; };
+		AED17A342199540C0000127C /* CollectionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionExtension.swift; sourceTree = "<group>"; };
+		AED17A3621995D900000127C /* ListEntities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListEntities.swift; sourceTree = "<group>"; };
+		AED17A3821995E8E0000127C /* ListTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewDataSource.swift; sourceTree = "<group>"; };
+		AED17A3A219969950000127C /* TableViewItemDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewItemDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +123,10 @@
 			children = (
 				4A5B56BA2195E0E4005082B8 /* AppDelegate.swift */,
 				4A5B56BC2195E0E4005082B8 /* ViewController.swift */,
+				AED17A33219954000000127C /* Extensions */,
+				AED17A29219940F70000127C /* Apis */,
+				AED17A0E21992AA10000127C /* Protocols */,
+				AED17A1D21993BD90000127C /* Screens */,
 				4A5B56DA2195E912005082B8 /* Resources */,
 			);
 			path = SwiftVIPER;
@@ -102,6 +150,80 @@
 				4A5B56C62195E0E5005082B8 /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		AE8953452199818900BA9616 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				AE895346219981A700BA9616 /* DetailViewController.swift */,
+				AE89534E219981EA00BA9616 /* DetailPresenter.swift */,
+				AE89534C219981DA00BA9616 /* DetailInteractor.swift */,
+				AE895350219981F800BA9616 /* DetailEntities.swift */,
+				AE89534A219981BC00BA9616 /* DetailRouter.swift */,
+				AE895347219981A700BA9616 /* DetailViewController.xib */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		AED17A0E21992AA10000127C /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				AED17A0F21992ABB0000127C /* Routerable.swift */,
+				AED17A1121992AD90000127C /* Presenterable.swift */,
+				AED17A1321992AEF0000127C /* Viewable.swift */,
+				AED17A1521992B090000127C /* Interactorable.swift */,
+				AED17A3A219969950000127C /* TableViewItemDataSource.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		AED17A1D21993BD90000127C /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				AED17A1E21993BE50000127C /* List */,
+				AE8953452199818900BA9616 /* Detail */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		AED17A1E21993BE50000127C /* List */ = {
+			isa = PBXGroup;
+			children = (
+				AED17A1F21993C000000127C /* ListViewController.swift */,
+				AED17A3821995E8E0000127C /* ListTableViewDataSource.swift */,
+				AED17A2321993C180000127C /* ListPresenter.swift */,
+				AED17A2721993C450000127C /* ListInteractor.swift */,
+				AED17A3621995D900000127C /* ListEntities.swift */,
+				AED17A2521993C2A0000127C /* ListRouter.swift */,
+				AED17A2021993C000000127C /* ListViewController.xib */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		AED17A29219940F70000127C /* Apis */ = {
+			isa = PBXGroup;
+			children = (
+				AED17A2A219941450000127C /* Api.swift */,
+				AED17A2C2199418D0000127C /* GitHubApi.swift */,
+				AED17A2E219941B10000127C /* Entities */,
+			);
+			path = Apis;
+			sourceTree = "<group>";
+		};
+		AED17A2E219941B10000127C /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				AED17A2F219941BA0000127C /* GitHubRepository.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		AED17A33219954000000127C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AED17A342199540C0000127C /* CollectionExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,6 +309,8 @@
 			files = (
 				4A5B56C52195E0E5005082B8 /* LaunchScreen.storyboard in Resources */,
 				4A5B56C22195E0E5005082B8 /* Assets.xcassets in Resources */,
+				AE895349219981A700BA9616 /* DetailViewController.xib in Resources */,
+				AED17A2221993C000000127C /* ListViewController.xib in Resources */,
 				4A5B56C02195E0E4005082B8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -205,8 +329,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AED17A3B219969950000127C /* TableViewItemDataSource.swift in Sources */,
+				AED17A2821993C450000127C /* ListInteractor.swift in Sources */,
+				AED17A352199540C0000127C /* CollectionExtension.swift in Sources */,
+				AE89534B219981BC00BA9616 /* DetailRouter.swift in Sources */,
+				AED17A2621993C2A0000127C /* ListRouter.swift in Sources */,
+				AE89534F219981EA00BA9616 /* DetailPresenter.swift in Sources */,
 				4A5B56BD2195E0E4005082B8 /* ViewController.swift in Sources */,
+				AED17A2D2199418D0000127C /* GitHubApi.swift in Sources */,
+				AED17A1021992ABB0000127C /* Routerable.swift in Sources */,
+				AE895351219981F800BA9616 /* DetailEntities.swift in Sources */,
+				AED17A3921995E8E0000127C /* ListTableViewDataSource.swift in Sources */,
+				AED17A2421993C180000127C /* ListPresenter.swift in Sources */,
+				AE895348219981A700BA9616 /* DetailViewController.swift in Sources */,
+				AE89534D219981DA00BA9616 /* DetailInteractor.swift in Sources */,
+				AED17A3721995D900000127C /* ListEntities.swift in Sources */,
+				AED17A30219941BA0000127C /* GitHubRepository.swift in Sources */,
+				AED17A2B219941450000127C /* Api.swift in Sources */,
+				AED17A1421992AEF0000127C /* Viewable.swift in Sources */,
+				AED17A1221992AD90000127C /* Presenterable.swift in Sources */,
+				AED17A1621992B090000127C /* Interactorable.swift in Sources */,
 				4A5B56BB2195E0E4005082B8 /* AppDelegate.swift in Sources */,
+				AED17A2121993C000000127C /* ListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

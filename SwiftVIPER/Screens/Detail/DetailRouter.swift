@@ -9,9 +9,7 @@
 import Foundation
 import UIKit
 
-// MARK: Initialize Detail Screen
-// Can transion Detail Screen Call by DetailRouterInput
-final class DetailRouterInput {
+struct DetailRouterInput {
 
     private static func view(entryEntity: DetailEntryEntity) -> DetailViewController {
         let view = DetailViewController()

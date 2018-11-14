@@ -29,7 +29,7 @@
                         <wkPreferences key="preferences"/>
                     </wkWebViewConfiguration>
                 </wkWebView>
-                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="anm-9c-6or">
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="anm-9c-6or">
                     <rect key="frame" x="177.5" y="333.5" width="20" height="20"/>
                 </activityIndicatorView>
             </subviews>

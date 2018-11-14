@@ -45,6 +45,7 @@ extension ListPresenter: ListViewOutputs {
         guard !entities.searchApiState.isFetching else { return }
         entities.searchApiState.isFetching = true
         dependencies.interactor.fetchSearch(page: entities.searchApiState.pageCount)
+        view.indicatorView(animate: true)
     }
 }
 
@@ -54,10 +55,11 @@ extension ListPresenter: ListInteractorOutputs {
         entities.searchApiState.pageCount += 1
         entities.searchApiState.gitHubRepositories += res.items
         view.reloadTableView(tableViewDataSource: ListTableViewDataSource(entities: entities, delegate: self))
+        view.indicatorView(animate: false)
     }
 
     func onErrorSearch(error: Error) {
-
+        view.indicatorView(animate: false)
     }
 }
 

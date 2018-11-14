@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListViewController" customModule="SwiftVIPER" customModuleProvider="target">
             <connections>
                 <outlet property="closeButton" destination="6Rm-k3-LUL" id="IV5-Ga-Pdg"/>
+                <outlet property="indicatorView" destination="Q2o-5o-750" id="30m-9A-bMp"/>
                 <outlet property="tableView" destination="Wld-VJ-buE" id="JOL-ZT-zRC"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -45,13 +46,18 @@
                         <action selector="onCloseButtonTapped:" destination="-1" eventType="touchUpInside" id="R84-WK-Vus"/>
                     </connections>
                 </button>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Q2o-5o-750">
+                    <rect key="frame" x="177.5" y="642" width="20" height="20"/>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="Wld-VJ-buE" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="1SI-8k-qRg"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Wld-VJ-buE" secondAttribute="trailing" id="Enb-1Q-8xa"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Q2o-5o-750" secondAttribute="bottom" constant="5" id="P8K-Kd-PkL"/>
                 <constraint firstItem="6Rm-k3-LUL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="Pjr-qy-TnK"/>
                 <constraint firstAttribute="bottom" secondItem="Wld-VJ-buE" secondAttribute="bottom" id="hQq-3C-Zp7"/>
+                <constraint firstItem="Q2o-5o-750" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="tFi-Fg-ZL1"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="6Rm-k3-LUL" secondAttribute="bottom" constant="10" id="wM9-UA-cVk"/>
                 <constraint firstItem="Wld-VJ-buE" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="wr6-10-kYB"/>
             </constraints>

@@ -35,11 +35,12 @@ extension DetailPresenter: DetailViewOutputs {
 
     func viewDidLoad() {
         view.requestWebView(with: URLRequest(url: URL(string: entities.entryEntity.gitHubRepository.url)!))
-        view.setNavigationBar(title: entities.entryEntity.gitHubRepository.fullName)
+        view.indicatorView(animate: true)
+        view.configure(entities: entities)
     }
 
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-
+        view.indicatorView(animate: false)
     }
 }
 

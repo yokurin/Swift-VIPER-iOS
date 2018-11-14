@@ -8,7 +8,9 @@
 
 import Foundation
 
-final class ListEntities {
+struct ListEntryEntity {}
+
+struct ListEntities {
     let entryEntity: ListEntryEntity
 
     class SearchApiState {

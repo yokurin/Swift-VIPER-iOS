@@ -93,8 +93,8 @@ open class ApiTask: ApiProtocol {
             "response: \(response ?? URLResponse())",
             "data: \(String(describing: String(data: data ?? Data(), encoding: .utf8)))"
         ]
-        print("レスポンス: {\(res.joined(separator: ", "))}")
-        print("レスポンス詳細: {\(detail.joined(separator: ", "))}")
+        print("Response: {\(res.joined(separator: ", "))}")
+        print("Response Detail: {\(detail.joined(separator: ", "))}")
     }
 }
 
@@ -151,8 +151,8 @@ public class URLRequestCreator {
         ]
         let detail: String = details.joined(separator: ", ")
         print(#file, #function)
-        print("リクエスト: {url: \(urlRequest.url?.absoluteString ?? "")}")
-        print("リクエスト詳細: {\(detail)}")
+        print("Request: {url: \(urlRequest.url?.absoluteString ?? "")}")
+        print("Request Detail: {\(detail)}")
     }
 }
 

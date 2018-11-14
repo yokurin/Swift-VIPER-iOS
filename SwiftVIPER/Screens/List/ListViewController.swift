@@ -11,6 +11,7 @@ import UIKit
 /// 画面が外部依存する処理のIF
 protocol ListViewInputs: AnyObject {
     func reloadTableView(tableViewDataSource: ListTableViewDataSource)
+    func indicatorView(animate: Bool)
 }
 
 /// Presenterに伝える
@@ -31,6 +32,7 @@ final class ListViewController: UIViewController {
             tableView.dataSource = self
         }
     }
+    @IBOutlet private weak var indicatorView: UIActivityIndicatorView!
     @IBOutlet private weak var closeButton: UIButton!
 
     override func viewDidLoad() {
@@ -48,10 +50,18 @@ final class ListViewController: UIViewController {
 
 // 外から呼ばれる
 extension ListViewController: ListViewInputs {
+
     func reloadTableView(tableViewDataSource: ListTableViewDataSource) {
         self.tableViewDataSource = tableViewDataSource
         DispatchQueue.main.async { [weak self] in
             self?.tableView.reloadData()
+        }
+    }
+
+    func indicatorView(animate: Bool) {
+        DispatchQueue.main.async { [weak self] in
+            self?.tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: animate ? 50 : 0, right: 0)
+            _ = animate ? self?.indicatorView.startAnimating() : self?.indicatorView.stopAnimating()
         }
     }
 }

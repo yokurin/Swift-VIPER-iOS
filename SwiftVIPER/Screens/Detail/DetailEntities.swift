@@ -8,14 +8,14 @@
 
 import Foundation
 
-final class DetailEntryEntity {
+struct DetailEntryEntity {
     let gitHubRepository: GitHubRepository
     init(gitHubRepository: GitHubRepository) {
         self.gitHubRepository = gitHubRepository
     }
 }
 
-final class DetailEntities {
+struct DetailEntities {
     let entryEntity: DetailEntryEntity
 
     init(entryEntity: DetailEntryEntity) {

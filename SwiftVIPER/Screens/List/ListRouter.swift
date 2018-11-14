@@ -10,11 +10,9 @@ import Foundation
 import UIKit
 
 
-final class ListEntryEntity {}
-
 // MARK: Initialize List Screen
 // Can transion List Screen Call by ListRouterInput
-final class ListRouterInput {
+struct ListRouterInput {
 
     private static func view(entryEntity: ListEntryEntity) -> ListViewController {
         let view = ListViewController()

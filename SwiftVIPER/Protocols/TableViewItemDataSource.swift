@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 
 protocol TableViewItemDataSource: AnyObject {
-    /// フェッチされている一覧データの総数
     var numberOfItems: Int { get }
 
     func itemCell(tableView: UITableView, indexPath: IndexPath) -> UITableViewCell

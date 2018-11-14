@@ -24,11 +24,11 @@ final class ListTableViewDataSource: TableViewItemDataSource {
     }
 
     var numberOfItems: Int {
-        return entities.searchApiState.gitHubRepositories.count
+        return entities.gitHubRepositories.count
     }
 
     func itemCell(tableView: UITableView, indexPath: IndexPath) -> UITableViewCell {
-        guard let repo = entities.searchApiState.gitHubRepositories[safe: indexPath.row] else { return UITableViewCell() }
+        guard let repo = entities.gitHubRepositories[safe: indexPath.row] else { return UITableViewCell() }
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "subtitle")
         cell.textLabel?.text = "\(repo.fullName)"
         cell.detailTextLabel?.textColor = UIColor.lightGray
@@ -38,7 +38,7 @@ final class ListTableViewDataSource: TableViewItemDataSource {
 
     func didSelect(tableView: UITableView, indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        guard let selectedRepo = entities.searchApiState.gitHubRepositories[safe: indexPath.row] else { return }
+        guard let selectedRepo = entities.gitHubRepositories[safe: indexPath.row] else { return }
         delegate?.didSelect(selectedRepo)
     }
 

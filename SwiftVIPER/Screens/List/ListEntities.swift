@@ -13,8 +13,9 @@ struct ListEntryEntity {}
 struct ListEntities {
     let entryEntity: ListEntryEntity
 
+    var gitHubRepositories: [GitHubRepository] = []
+
     struct SearchApiState {
-        var gitHubRepositories: [GitHubRepository] = []
         var pageCount = 1
         var isFetching = false
     }

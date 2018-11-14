@@ -53,7 +53,7 @@ extension ListPresenter: ListInteractorOutputs {
     func onSuccessSearch(res: SearchRepositoriesResponse) {
         entities.searchApiState.isFetching = false
         entities.searchApiState.pageCount += 1
-        entities.searchApiState.gitHubRepositories += res.items
+        entities.gitHubRepositories += res.items
         view.reloadTableView(tableViewDataSource: ListTableViewDataSource(entities: entities, delegate: self))
         view.indicatorView(animate: false)
     }

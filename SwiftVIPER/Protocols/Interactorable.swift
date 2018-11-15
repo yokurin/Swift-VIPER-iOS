@@ -8,4 +8,6 @@
 
 import Foundation
 
-protocol Interactorable {}
+protocol Interactorable {
+    // nop
+}

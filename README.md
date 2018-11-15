@@ -74,7 +74,7 @@ Example
 ```swift
 
 protocol ViewInputs: AnyObject {
-    // nop
+    
 }
 
 protocol ViewOutputs: AnyObject {
@@ -94,10 +94,7 @@ final class ListViewController: UIViewController {
 
 }
 
-extension ListViewController: ListViewInputs {
-    // nop
-}
-
+extension ListViewController: ListViewInputs {}
 
 extension ListViewController: Viewable {}
 
@@ -119,7 +116,7 @@ Example
 ```swift
 
 protocol InteractorOutputs: AnyObject {
-    // nop
+
 }
 
 final class Interactor: Interactorable {
@@ -189,13 +186,6 @@ final class Entities {
     let entryEntity: EntryEntity
     
     var entities: [SomeEntity] = []
-    
-    class ApiState {
-        var pageCount = 1
-        var isFetching = false
-    }
-
-    var apiState = ApiState()
 
     init(entryEntity: EntryEntity) {
         self.entryEntity = entryEntity
@@ -292,7 +282,7 @@ WIP ...
 ## Installation
 
 ```
-git clone git@github.com:yokurin/Swift-MVCR-iOS.git
+git clone git@github.com:yokurin/Swift-VIPER-iOS.git
 ```
 
 ## Author

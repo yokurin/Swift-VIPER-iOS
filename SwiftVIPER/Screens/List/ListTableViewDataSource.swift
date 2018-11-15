@@ -9,18 +9,18 @@
 import Foundation
 import UIKit
 
-protocol ListTableViewDataSourceDelegate: AnyObject {
+protocol ListTableViewDataSourceOutputs: AnyObject {
     func didSelect(_ gitHubRepository: GitHubRepository)
 }
 
 final class ListTableViewDataSource: TableViewItemDataSource {
 
     private weak var entities: ListEntities!
-    private weak var delegate: ListTableViewDataSourceDelegate?
+    private weak var presenter: ListTableViewDataSourceOutputs?
 
-    init(entities: ListEntities, delegate: ListTableViewDataSourceDelegate) {
+    init(entities: ListEntities, presenter: ListTableViewDataSourceOutputs) {
         self.entities = entities
-        self.delegate = delegate
+        self.presenter = presenter
     }
 
     var numberOfItems: Int {
@@ -39,7 +39,7 @@ final class ListTableViewDataSource: TableViewItemDataSource {
     func didSelect(tableView: UITableView, indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         guard let selectedRepo = entities.gitHubRepositories[safe: indexPath.row] else { return }
-        delegate?.didSelect(selectedRepo)
+        presenter?.didSelect(selectedRepo)
     }
 
 }

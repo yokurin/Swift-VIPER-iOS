@@ -33,8 +33,9 @@ final class ListPresenter: Presenterable {
 
 extension ListPresenter: ListViewOutputs {
     func viewDidLoad() {
+        view.configure(entities: entities)
         entities.searchApiState.isFetching = true
-        dependencies.interactor.fetchSearch(page: entities.searchApiState.pageCount)
+        dependencies.interactor.fetchSearch(language: entities.entryEntity.language, page: entities.searchApiState.pageCount)
     }
 
     func onCloseButtonTapped() {
@@ -44,7 +45,7 @@ extension ListPresenter: ListViewOutputs {
     func onReachBottom() {
         guard !entities.searchApiState.isFetching else { return }
         entities.searchApiState.isFetching = true
-        dependencies.interactor.fetchSearch(page: entities.searchApiState.pageCount)
+        dependencies.interactor.fetchSearch(language: entities.entryEntity.language, page: entities.searchApiState.pageCount)
         view.indicatorView(animate: true)
     }
 }
@@ -54,7 +55,7 @@ extension ListPresenter: ListInteractorOutputs {
         entities.searchApiState.isFetching = false
         entities.searchApiState.pageCount += 1
         entities.gitHubRepositories += res.items
-        view.reloadTableView(tableViewDataSource: ListTableViewDataSource(entities: entities, delegate: self))
+        view.reloadTableView(tableViewDataSource: ListTableViewDataSource(entities: entities, presenter: self))
         view.indicatorView(animate: false)
     }
 
@@ -63,7 +64,7 @@ extension ListPresenter: ListInteractorOutputs {
     }
 }
 
-extension ListPresenter: ListTableViewDataSourceDelegate {
+extension ListPresenter: ListTableViewDataSourceOutputs {
     func didSelect(_ gitHubRepository: GitHubRepository) {
         dependencies.router.transitionDetail(gitHubRepository: gitHubRepository)
     }

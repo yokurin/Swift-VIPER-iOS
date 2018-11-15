@@ -8,7 +8,9 @@
 
 import Foundation
 
-struct ListEntryEntity {}
+struct ListEntryEntity {
+    let language: String
+}
 
 final class ListEntities {
     let entryEntity: ListEntryEntity

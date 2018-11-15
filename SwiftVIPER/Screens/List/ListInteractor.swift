@@ -17,8 +17,8 @@ final class ListInteractor: Interactorable {
 
     weak var presenter: ListInteractorOutputs?
 
-    func fetchSearch(page: Int) {
-        let request = GitHubApi.SearchLanguageRequest(language: "Swift", page: page)
+    func fetchSearch(language: String, page: Int) {
+        let request = GitHubApi.SearchLanguageRequest(language: language, page: page)
         GitHubApi().search(with: request, onSuccess: { [weak self] res in
             self?.presenter?.onSuccessSearch(res: res)
             //print(res)

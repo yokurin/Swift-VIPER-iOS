@@ -8,13 +8,12 @@
 
 import UIKit
 
-/// 画面が外部依存する処理のIF
 protocol ListViewInputs: AnyObject {
+    func configure(entities: ListEntities)
     func reloadTableView(tableViewDataSource: ListTableViewDataSource)
     func indicatorView(animate: Bool)
 }
 
-/// Presenterに伝える
 protocol ListViewOutputs: AnyObject {
     func viewDidLoad()
     func onCloseButtonTapped()
@@ -37,7 +36,6 @@ final class ListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "Swift Repositories"
         closeButton.isHidden = navigationController?.viewControllers.count != 1
         presenter?.viewDidLoad()
     }
@@ -48,8 +46,11 @@ final class ListViewController: UIViewController {
 
 }
 
-// 外から呼ばれる
 extension ListViewController: ListViewInputs {
+
+    func configure(entities: ListEntities) {
+        navigationItem.title = "\(entities.entryEntity.language) Repositories"
+    }
 
     func reloadTableView(tableViewDataSource: ListTableViewDataSource) {
         self.tableViewDataSource = tableViewDataSource
@@ -66,7 +67,6 @@ extension ListViewController: ListViewInputs {
     }
 }
 
-// MARK: UITableViewDelegate, UITableViewDataSource
 extension ListViewController: UITableViewDelegate, UITableViewDataSource {
 
     func numberOfSections(in tableView: UITableView) -> Int {

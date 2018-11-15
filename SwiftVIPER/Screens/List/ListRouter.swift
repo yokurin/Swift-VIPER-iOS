@@ -20,7 +20,7 @@ struct ListRouterInput {
         let dependencies = ListPresenterDependencies(interactor: interactor, router: ListRouterOutput(view))
         let presenter = ListPresenter(entities: ListEntities(entryEntity: entryEntity), view: view, dependencies: dependencies)
         view.presenter = presenter
-        view.tableViewDataSource = ListTableViewDataSource(entities: presenter.entities, delegate: presenter)
+        view.tableViewDataSource = ListTableViewDataSource(entities: presenter.entities, presenter: presenter)
         interactor.presenter = presenter
         return view
     }

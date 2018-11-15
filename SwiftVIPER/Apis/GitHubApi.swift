@@ -11,7 +11,7 @@ import Foundation
 struct GitHubApi {
     private static var baseUrl = "https://api.github.com"
 
-    struct searchLanguageRequest: RequestDto {
+    struct SearchLanguageRequest: Request {
         var url: String {
             return baseUrl + "/search/repositories"
         }
@@ -26,28 +26,20 @@ struct GitHubApi {
             ]
         }
     }
-}
 
-struct GitHubApiSevice {}
+    func search(with request: SearchLanguageRequest, onSuccess: @escaping (SearchRepositoriesResponse) -> Void, onError: @escaping (Error) -> Void) {
+        ApiTask().request(.get, request: request, onSuccess: { (data, session) in
+            do {
+                let response = try self.parse(data)
+                onSuccess(response)
+            } catch {
+                onError(ApiError.failedParse)
+            }
+        }, onError: onError)
+    }
 
-extension GitHubApiSevice {
-    struct Search {
-        func `do`(with language: String, page: Int = 1, onSuccess: @escaping (SearchRepositoriesResponse) -> Void, onError: @escaping (Error) -> Void) {
-            let dto = GitHubApi.searchLanguageRequest(language: "Swift", page: page)
-            ApiTask().request(.get, dto: dto, onSuccess: { (data, session) in
-                do {
-                    let response = try self.parse(data)
-                    onSuccess(response)
-                } catch {
-                    onError(ApiError.failedParse)
-                }
-            }, onError: onError)
-        }
-
-        private func parse(_ data: Data) throws -> SearchRepositoriesResponse {
-            let response: SearchRepositoriesResponse = try JSONDecoder().decode(SearchRepositoriesResponse.self, from: data)
-            return response
-        }
+    private func parse(_ data: Data) throws -> SearchRepositoriesResponse {
+        let response: SearchRepositoriesResponse = try JSONDecoder().decode(SearchRepositoriesResponse.self, from: data)
+        return response
     }
 }
-

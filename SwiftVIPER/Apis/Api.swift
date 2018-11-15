@@ -20,13 +20,13 @@ public enum HttpMethod: String {
     case post = "POST"
 }
 
-public protocol RequestDto {
+public protocol Request {
     var url: String { get }
     func params() -> [(key: String, value: String)]
 }
 
 protocol ApiProtocol {
-    func request(_ httpMethod: HttpMethod, dto: RequestDto, onSuccess: @escaping (Data, URLResponse?) -> Void, onError: @escaping (Error) -> Void)
+    func request(_ httpMethod: HttpMethod, request: Request, onSuccess: @escaping (Data, URLResponse?) -> Void, onError: @escaping (Error) -> Void)
 }
 
 open class ApiTask: ApiProtocol {
@@ -38,9 +38,9 @@ open class ApiTask: ApiProtocol {
 
     public init() {}
 
-    public func request(_ httpMethod: HttpMethod, dto: RequestDto, onSuccess: @escaping (Data, URLResponse?) -> Void, onError: @escaping (Error) -> Void) {
+    public func request(_ httpMethod: HttpMethod, request: Request, onSuccess: @escaping (Data, URLResponse?) -> Void, onError: @escaping (Error) -> Void) {
         let urlRequest = URLRequestCreator.create(httpMethod: httpMethod,
-                                                  dto: dto,
+                                                  request: request,
                                                   header: httpHeader,
                                                   timeoutInterval: timeoutInterval,
                                                   cachePolicy: cachePolicy)
@@ -101,7 +101,7 @@ open class ApiTask: ApiProtocol {
 public class URLRequestCreator {
 
     static func create(httpMethod: HttpMethod,
-                       dto: RequestDto,
+                       request: Request,
                        header: [String: String]?,
                        timeoutInterval: TimeInterval,
                        cachePolicy: URLRequest.CachePolicy) -> URLRequest {
@@ -116,10 +116,10 @@ public class URLRequestCreator {
             }
         }
         if httpMethod == .get {
-            urlRequest.url = URL(string: appendGetParameter(url: dto.url, parameter: URLEncoder.encode(dto.params())))
+            urlRequest.url = URL(string: appendGetParameter(url: request.url, parameter: URLEncoder.encode(request.params())))
         } else {
-            urlRequest.url = URL(string: dto.url)
-            urlRequest.httpBody = URLEncoder.encode(dto.params()).data(using: String.Encoding.utf8, allowLossyConversion: false)
+            urlRequest.url = URL(string: request.url)
+            urlRequest.httpBody = URLEncoder.encode(request.params()).data(using: String.Encoding.utf8, allowLossyConversion: false)
         }
         #if DEBUG
         debugRequest(with: urlRequest as URLRequest)

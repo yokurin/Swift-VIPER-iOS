@@ -14,7 +14,7 @@ import UIKit
 // Can transion List Screen Call by ListRouterInput
 struct ListRouterInput {
 
-    private static func view(entryEntity: ListEntryEntity) -> ListViewController {
+    private func view(entryEntity: ListEntryEntity) -> ListViewController {
         let view = ListViewController()
         let interactor = ListInteractor()
         let dependencies = ListPresenterDependencies(interactor: interactor, router: ListRouterOutput(view))
@@ -26,12 +26,12 @@ struct ListRouterInput {
     }
 
     func push(from: Viewable, entryEntity: ListEntryEntity) {
-        let view = ListRouterInput.view(entryEntity: entryEntity)
+        let view = self.view(entryEntity: entryEntity)
         from.push(view, animated: true)
     }
 
     func present(from: Viewable, entryEntity: ListEntryEntity) {
-        let nav = UINavigationController(rootViewController: ListRouterInput.view(entryEntity: entryEntity))
+        let nav = UINavigationController(rootViewController: view(entryEntity: entryEntity))
         from.present(nav, animated: true)
     }
 }

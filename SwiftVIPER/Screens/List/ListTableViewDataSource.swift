@@ -15,7 +15,7 @@ protocol ListTableViewDataSourceDelegate: AnyObject {
 
 final class ListTableViewDataSource: TableViewItemDataSource {
 
-    private var entities: ListEntities
+    private weak var entities: ListEntities!
     private weak var delegate: ListTableViewDataSourceDelegate?
 
     init(entities: ListEntities, delegate: ListTableViewDataSourceDelegate) {

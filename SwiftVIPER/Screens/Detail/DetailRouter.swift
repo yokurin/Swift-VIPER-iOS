@@ -11,7 +11,7 @@ import UIKit
 
 struct DetailRouterInput {
 
-    private static func view(entryEntity: DetailEntryEntity) -> DetailViewController {
+    private func view(entryEntity: DetailEntryEntity) -> DetailViewController {
         let view = DetailViewController()
         let interactor = DetailInteractor()
         let dependencies = DetailPresenterDependencies(interactor: interactor, router: DetailRouterOutput(view))
@@ -22,12 +22,12 @@ struct DetailRouterInput {
     }
 
     func push(from: Viewable, entryEntity: DetailEntryEntity) {
-        let view = DetailRouterInput.view(entryEntity: entryEntity)
+        let view = self.view(entryEntity: entryEntity)
         from.push(view, animated: true)
     }
 
     func present(from: Viewable, entryEntity: DetailEntryEntity) {
-        let nav = UINavigationController(rootViewController: DetailRouterInput.view(entryEntity: entryEntity))
+        let nav = UINavigationController(rootViewController: view(entryEntity: entryEntity))
         from.present(nav, animated: true)
     }
 }

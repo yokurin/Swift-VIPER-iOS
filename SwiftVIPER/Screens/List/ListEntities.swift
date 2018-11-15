@@ -10,12 +10,12 @@ import Foundation
 
 struct ListEntryEntity {}
 
-struct ListEntities {
+final class ListEntities {
     let entryEntity: ListEntryEntity
 
     var gitHubRepositories: [GitHubRepository] = []
 
-    struct SearchApiState {
+    class SearchApiState {
         var pageCount = 1
         var isFetching = false
     }

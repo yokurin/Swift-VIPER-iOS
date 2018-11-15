@@ -291,4 +291,4 @@ Tsubasa Hayashi, yoku.rin.99@gmail.com
 
 ## License
 
-SwiftMVCR is available under the MIT license. See the LICENSE file for more info.
+SwiftVIPER is available under the MIT license. See the LICENSE file for more info.

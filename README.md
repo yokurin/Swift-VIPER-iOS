@@ -259,8 +259,8 @@ final class RouterOutput: Routerable {
         self.view = view
     }
 
-    func transitionDetail() {
-        DetailRouterInput().push(from: view, entryEntity: EntryEntity())
+    func transitionToOther() {
+        OtherRouterInput().push(from: view, entryEntity: OtherEntryEntity())
     }
 }
 

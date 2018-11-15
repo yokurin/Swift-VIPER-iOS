@@ -128,7 +128,7 @@ final class Interactor: Interactorable {
 
 ```
 
-### Presenter (including UIViewController)
+### Presenter
 Presenter must implement Presenterable.
 
 ```swift
